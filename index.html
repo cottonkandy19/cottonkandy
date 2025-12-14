@@ -694,7 +694,9 @@
             <label for="message">Message</label>
             <textarea id="message" placeholder="Tell us what you're looking for..."></textarea>
           </div>
-          <button type="submit" class="btn-primary">Send Message</button>
+          <button type="button" class="btn-primary" onclick="sendToWhatsApp()">
+  Send Message
+</button>
         </form>
 
         <div class="contact-mini">
@@ -744,5 +746,22 @@
     // Set current year
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+  <script>
+function sendToWhatsApp() {
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+  const message = document.getElementById("message").value;
+
+  const text =
+    "Hello Cotton Kandy,%0A%0A" +
+    "Name: " + name + "%0A" +
+    "Phone: " + phone + "%0A%0A" +
+    "Message:%0A" + message;
+
+  const whatsappUrl = "https://wa.me/919380661101?text=" + text;
+  window.open(whatsappUrl, "_blank");
+}
+</script>
 </body>
 </html>
+
