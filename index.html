@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cotton Kandy | Fashionably Sweet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+:root {
+  --lavender: #c27ad5;          /* a bit stronger */
+  --lavender-dark: #8b3fb3;     /* darker for headings/buttons */
+  --pink: #f47ab5;
+  --bg-light: #ffeefe;          /* slightly deeper pink */
+  --text-dark: #241628;         /* darker text */
+  --text-muted: #4f4658;        /* less faded subtitles */
+  --radius-lg: 24px;
+  --shadow-soft: 0 12px 30px rgba(0, 0, 0, 0.12);
+  --gradient-main: linear-gradient(135deg, #f47ab5, #c27ad5);
+}
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255, 249, 255, 0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(200, 162, 200, 0.3);
+    }
+
+    .nav-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .brand-logo {
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      background: var(--gradient-main);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 1rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .brand-text-main {
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .brand-tagline {
+      font-size: 0.8rem;
+      color: var(--lavender-dark);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      position: relative;
+      padding-bottom: 2px;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      background: var(--gradient-main);
+      transition: width 0.2s ease-out;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      padding: 0.5rem 1.1rem;
+      border-radius: 999px;
+      background: var(--gradient-main);
+      color: white;
+      font-size: 0.9rem;
+      font-weight: 600;
+      box-shadow: var(--shadow-soft);
+      border: none;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    /* HERO */
+    .hero {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 3.5rem;
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero-left {
+      position: relative;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.2rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(200, 162, 200, 0.12);
+      color: var(--lavender-dark);
+      font-size: 0.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--pink);
+    }
+
+    .hero-title {
+      font-size: clamp(2.1rem, 4vw, 2.7rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 0.75rem;
+      background: var(--gradient-main);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      color: var(--text-muted);
+      max-width: 480px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .btn-primary {
+      padding: 0.75rem 1.4rem;
+      border-radius: 999px;
+      background: var(--gradient-main);
+      color: white;
+      border: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+      box-shadow: var(--shadow-soft);
+      cursor: pointer;
+    }
+
+    .btn-secondary {
+      padding: 0.75rem 1.4rem;
+      border-radius: 999px;
+      background: white;
+      color: var(--lavender-dark);
+      border: 1px solid rgba(200, 162, 200, 0.4);
+      font-size: 0.95rem;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+    }
+
+    .stat-card {
+      min-width: 130px;
+      padding: 0.8rem 1rem;
+      border-radius: 18px;
+      background: white;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .stat-number {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--lavender-dark);
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .hero-right {
+      position: relative;
+    }
+
+    .hero-card {
+      background: white;
+      border-radius: 28px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card-tag {
+      font-size: 0.8rem;
+      color: var(--lavender-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-card-title {
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+
+    .hero-card-text {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 0.9rem;
+    }
+
+    .hero-swatch-row {
+      display: flex;
+      gap: 0.6rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .swatch {
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      border: 2px solid white;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .swatch-1 { background: #f7b3d0; }
+    .swatch-2 { background: #c8a2ff; }
+    .swatch-3 { background: #ffe6ff; }
+
+    .hero-card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .badge-soft {
+      padding: 0.2rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(200, 162, 200, 0.15);
+      color: var(--lavender-dark);
+      font-size: 0.75rem;
+    }
+
+    .hero-circle {
+      position: absolute;
+      width: 160px;
+      height: 160px;
+      border-radius: 999px;
+      background: radial-gradient(circle, #ffe0f2, transparent 70%);
+      top: -40px;
+      right: -40px;
+      opacity: 0.7;
+      pointer-events: none;
+    }
+
+    /* SECTIONS */
+    section {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 1.25rem 3rem;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .section-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    /* PRINTS GRID */
+    .prints-grid {
+      display: grid;
+      gap: 1.25rem;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+
+    .print-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: 0.9rem;
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+.print-thumb {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #f7b3d0, #c8a2ff);
+  opacity: 0.85;
+}
+
+    .print-name {
+      font-weight: 600;
+    }
+
+    /* WHY SECTION */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.25rem;
+    }
+
+    .why-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: 1.2rem;
+      box-shadow: var(--shadow-soft);
+      font-size: 0.9rem;
+    }
+
+    .why-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: rgba(200, 162, 200, 0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.7rem;
+      font-size: 1.1rem;
+    }
+
+    .why-title {
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    .why-text {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+    }
+
+    /* CONTACT */
+    .contact-wrapper {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: 1.6rem;
+      box-shadow: var(--shadow-soft);
+      max-width: 680px;
+      margin: 0 auto 3rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    }
+
+    .contact-form label {
+      display: block;
+      font-size: 0.85rem;
+      margin-bottom: 0.25rem;
+      color: var(--text-muted);
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.5rem 0.7rem;
+      border-radius: 12px;
+      border: 1px solid rgba(200, 162, 200, 0.6);
+      font-size: 0.9rem;
+      outline: none;
+    }
+
+    .contact-form textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: var(--lavender-dark);
+      box-shadow: 0 0 0 1px rgba(200, 162, 200, 0.5);
+    }
+
+    .contact-mini {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .wa-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 0.7rem;
+      padding: 0.45rem 0.8rem;
+      border-radius: 999px;
+      background: rgba(40, 201, 88, 0.08);
+      font-size: 0.85rem;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #f3e5f5;
+      border-top: 1px solid rgba(200, 162, 200, 0.4);
+      padding: 1.4rem 1.25rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .footer-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 880px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+      .hero-right {
+        order: -1;
+      }
+      .prints-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .nav-links {
+        display: none; /* simple mobile nav hide */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding-top: 1.6rem;
+      }
+      .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .stat-card {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="brand-logo">CK</div>
+        <div>
+          <div class="brand-text-main">Cotton Kandy</div>
+          <div class="brand-tagline">Fashionably Sweet</div>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#prints">Prints</a>
+        <a href="#why">Why Us</a>
+        <a href="#contact">Contact</a>
+        <button class="nav-cta">Shop Coming Soon</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main id="home" class="hero">
+    <section class="hero-left">
+      <div class="hero-pill">
+        <span class="hero-pill-dot"></span>
+        Sweet styles in pure cotton
+      </div>
+      <h1 class="hero-title">Fashionably Sweet</h1>
+      <p class="hero-subtitle">
+        Discover premium Indian block-printed cotton wear — soft on the skin,
+        rich in tradition, and styled for everyday elegance.
+      </p>
+      <div class="hero-buttons">
+  <a href="#prints" class="btn-primary">Explore Collections</a>
+  <a href="#why" class="btn-secondary">Our Story</a>
+</div>
+
+      <div class="hero-stats">
+        <div class="stat-card">
+          <div class="stat-number">500+</div>
+          <div class="stat-label">Unique print designs</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">10K+</div>
+          <div class="stat-label">Happy customers</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Pure cotton comfort</div>
+        </div>
+      </div>
+    </section>
+
+    <aside class="hero-right">
+      <div class="hero-card">
+        <div class="hero-card-tag">Signature Palette</div>
+        <div class="hero-card-title">Lavender dreams</div>
+        <div class="hero-card-text">
+          Inspired by traditional Indian textiles, softened with pastel tones
+          for a sweet, modern finish.
+        </div>
+        <div class="hero-swatch-row">
+          <div class="swatch swatch-1"></div>
+          <div class="swatch swatch-2"></div>
+          <div class="swatch swatch-3"></div>
+        </div>
+        <div class="hero-card-footer">
+          <span>Block prints • Cotton • Comfort</span>
+          <span class="badge-soft">Made in Bharath 🇮🇳</span>
+        </div>
+        <div class="hero-circle"></div>
+      </div>
+    </aside>
+  </main>
+
+  <!-- PRINTS SECTION -->
+  <section id="prints">
+    <div class="section-header">
+      <h2 class="section-title">Our Prints</h2>
+      <p class="section-subtitle">
+        Handpicked Indian traditional prints, curated in soft cotton for
+        everyday wear.
+      </p>
+    </div>
+    <div class="prints-grid">
+      <div class="print-card">
+        <div class="print-thumb"></div>
+        <div class="print-name">Kalamkari</div>
+        <div class="print-desc">Artful stories in every motif.</div>
+      </div>
+      <div class="print-card">
+        <div class="print-thumb"></div>
+        <div class="print-name">Ajrakh</div>
+        <div class="print-desc">Heritage patterns, deep hues.</div>
+      </div>
+      <div class="print-card">
+        <div class="print-thumb"></div>
+        <div class="print-name">Indigo</div>
+        <div class="print-desc">Cool blues in soft cotton.</div>
+      </div>
+      <div class="print-card">
+        <div class="print-thumb"></div>
+        <div class="print-name">Jaipur</div>
+        <div class="print-desc">Playful florals & buttas.</div>
+      </div>
+      <div class="print-card">
+        <div class="print-thumb"></div>
+        <div class="print-name">Bagru</div>
+        <div class="print-desc">Earthy tones, timeless style.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY SECTION -->
+  <section id="why">
+    <div class="section-header">
+      <h2 class="section-title">Why Cotton Kandy?</h2>
+      <p class="section-subtitle">
+        We blend craft, comfort, and sweetness into every stitch.
+      </p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">🧵</div>
+        <div class="why-title">Premium Cotton Only</div>
+        <div class="why-text">
+          Breathable, soft fabrics chosen for all-day comfort, even in warm
+          weather.
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🎨</div>
+        <div class="why-title">Traditional Prints</div>
+        <div class="why-text">
+          Kalamkari, Ajrakh, Indigo, Jaipur, Bagru — curated to celebrate Indian
+          textile heritage.
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">💗</div>
+        <div class="why-title">Fashionably Sweet</div>
+        <div class="why-text">
+          Pastel palettes, soft silhouettes, and everyday-friendly designs for
+          a sweet, chic wardrobe.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <div class="section-header">
+      <h2 class="section-title">Reach Out</h2>
+      <p class="section-subtitle">
+        Just cotton love — we’re a message away.
+      </p>
+    </div>
+
+    <div class="contact-wrapper">
+      <div class="contact-grid">
+        <form class="contact-form">
+          <div style="margin-bottom: 0.8rem;">
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Your name" />
+          </div>
+          <div style="margin-bottom: 0.8rem;">
+            <label for="phone">Phone</label>
+            <input id="phone" type="tel" placeholder="Your phone number" />
+          </div>
+          <div style="margin-bottom: 1rem;">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Tell us what you're looking for..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+
+        <div class="contact-mini">
+          <p>
+            Prefer WhatsApp? We’re happy to share photos, prices, and fabric details directly.
+          </p>
+          <a
+  class="wa-link"
+  href="https://wa.me/919380661101"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <span>💬 Chat on WhatsApp</span>
+</a>
+
+          <p style="margin-top: 1rem;">
+            Made with love in Bharath 🇮🇳  
+            <br />Kalamkari • Indigo • Jaipur • Ajrakh • Bagru & more.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      © <span id="year"></span> Cotton Kandy · Fashionably Sweet  
+      <br />Bangalore, India  
+      <br />📞 <a href="tel:9380661101">9380661101</a> ·
+      ✉️ <a href="mailto:cottonkandy19@gmail.com">cottonkandy19@gmail.com</a>
+    </div>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#prints">Prints</a>
+      <a href="#why">Why Us</a>
+      <a
+        href="https://www.instagram.com/cottonkandy_19/"
+        target="_blank"
+      >Instagram</a>
+    </div>
+  </div>
+</footer>
+
+  <script>
+    // Set current year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
