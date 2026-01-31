@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <title>Cotton Kandy | Fashionably Sweet</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
 :root {
   --lavender: #c27ad5;          /* a bit stronger */
@@ -18,11 +22,12 @@
 }
 
     * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
 
     body {
       background: var(--bg-light);
@@ -126,15 +131,6 @@
     }
 
     /* HERO */
-    .hero {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 2.5rem 1.25rem 3.5rem;
-      display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
-      gap: 2rem;
-      align-items: center;
-    }
 
     .hero-left {
       position: relative;
@@ -160,27 +156,30 @@
     }
 
     .hero-title {
-      font-size: clamp(2.1rem, 4vw, 2.7rem);
+      font-size: clamp(2.5rem, 4.5vw, 3.2rem);
       font-weight: 800;
-      line-height: 1.15;
-      margin-bottom: 0.75rem;
+      letter-spacing: 0.01em;
+      line-height: 1.35;
+      margin-bottom: 1.5rem;
       background: var(--gradient-main);
       -webkit-background-clip: text;
       color: transparent;
     }
 
-    .hero-subtitle {
-      font-size: 1rem;
-      color: var(--text-muted);
-      max-width: 480px;
-      margin-bottom: 1.5rem;
-    }
+.hero-subtitle {
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+  color: var(--text-muted);
+  max-width: 640	px;
+  margin: 0 auto 1.8rem;
+  text-align: center;
+}
 
     .hero-buttons {
       display: flex;
       flex-wrap: wrap;
       gap: 0.85rem;
-      margin-bottom: 1.75rem;
+      margin-bottom: 2rem;
     }
 
     .btn-primary {
@@ -206,6 +205,30 @@
       cursor: pointer;
     }
 
+/* ===== SUBTLE BUTTON HOVER (GLOBAL) ===== */
+.btn-primary,
+.btn-secondary,
+.nav-cta {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    filter 0.25s ease;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover,
+.nav-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.14);
+}
+
+/* Subtle glow only for gradient buttons */
+.btn-primary:hover,
+.nav-cta:hover {
+  filter: brightness(1.05);
+}
+
+
     .hero-stats {
       display: flex;
       flex-wrap: wrap;
@@ -213,7 +236,7 @@
     }
 
     .stat-card {
-      min-width: 130px;
+      min-width: 160px;
       padding: 0.8rem 1rem;
       border-radius: 18px;
       background: white;
@@ -309,7 +332,7 @@
 
     /* SECTIONS */
     section {
-      max-width: 1080px;
+      max-width: 1380px;
       margin: 0 auto;
       padding: 0 1.25rem 3rem;
     }
@@ -320,49 +343,81 @@
     }
 
     .section-title {
-      font-size: 1.6rem;
-      font-weight: 700;
-      margin-bottom: 0.3rem;
-    }
+  font-size: 2.35rem;
+  letter-spacing: 0.02em;                 /* smaller & elegant */
+  font-weight: 750;                   /* softer than hero */
+  margin-bottom: 0.4rem;
+  background: var(--gradient-main);   /* same gradient */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
 
     .section-subtitle {
-      font-size: 0.95rem;
+      font-size: 1.25rem;
       color: var(--text-muted);
     }
 
     /* PRINTS GRID */
-    .prints-grid {
-      display: grid;
-      gap: 1.25rem;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-    }
 
-    .print-card {
-      background: white;
-      border-radius: var(--radius-lg);
-      padding: 0.9rem;
-      box-shadow: var(--shadow-soft);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-      text-align: center;
-      font-size: 0.9rem;
-    }
+.prints-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-content: center;
+}
+
+.print-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 0.9rem;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+.print-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.print-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+}
+
+.print-card:hover img {
+  transform: scale(1.03);
+  transition: transform 0.3s ease;
+}
 
 .print-thumb {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 3 / 4;   /* taller frame */
   border-radius: 18px;
-  background: linear-gradient(135deg, #f7b3d0, #c8a2ff);
-  opacity: 0.85;
+  overflow: hidden;
 }
+
+.print-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.print-thumb {
+  margin-bottom: 0.6rem;
+}
+
 
     .print-name {
       font-weight: 600;
     }
 
     /* WHY SECTION */
+
     .why-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -377,6 +432,15 @@
       font-size: 0.9rem;
     }
 
+.why-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.14);
+}
+
     .why-icon {
       width: 34px;
       height: 34px;
@@ -387,6 +451,7 @@
       justify-content: center;
       margin-bottom: 0.7rem;
       font-size: 1.1rem;
+      opacity: 0.85;
     }
 
     .why-title {
@@ -407,13 +472,13 @@
       box-shadow: var(--shadow-soft);
       max-width: 680px;
       margin: 0 auto 3rem;
+      transform: scale(1.20);
+      transform-origin: center top;
     }
 
     .contact-grid {
-      display: grid;
-      gap: 1.5rem;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-    }
+  display: block;
+}
 
     .contact-form label {
       display: block;
@@ -518,121 +583,232 @@
         flex: 1 1 100%;
       }
     }
+
+/* ===== HERO CENTER FIX (ZOOMED IN) ===== */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 62vh;          /* tighter vertical space */
+  text-align: center;
+  padding: 2.5rem 1.25rem;  /* intentional top & bottom */
+}
+
+.hero-center {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hero-center {
+  transform: scale(1.15);
+  transform-origin: center top;
+}
+
+.hero-pill {
+  margin: 0 auto 1rem;
+}
+
+.hero-buttons,
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+/* ===== CLEAN HEADER STYLE ===== */
+
+.clean-header {
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+  backdrop-filter: none;
+}
+
+.clean-inner {
+  max-width: 1200px;
+  padding: 0.8rem 2.5rem;
+}
+
+/* Logo text only */
+.brand-text-only {
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  background: linear-gradient(90deg, #f47ab5, #9b7bcf);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Navigation */
+.clean-nav {
+  gap: 2.5rem;
+}
+
+.clean-nav a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #6b5a7a;
+}
+
+.clean-nav a::after {
+  display: none; /* remove underline animation */
+}
+
+.clean-nav a:hover {
+  color: #9b7bcf;
+}
+
+/* ADD THIS HERE */
+.brand-text-only {
+  cursor: pointer;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+p {
+  font-weight: 500;
+}
+
   </style>
 </head>
 <body>
   <!-- NAVBAR -->
-  <header class="navbar">
-    <div class="nav-inner">
-      <div class="brand">
-        <div class="brand-logo">CK</div>
-        <div>
-          <div class="brand-text-main">Cotton Kandy</div>
-          <div class="brand-tagline">Fashionably Sweet</div>
-        </div>
-      </div>
-      <nav class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#prints">Prints</a>
-        <a href="#why">Why Us</a>
-        <a href="#contact">Contact</a>
-        <button class="nav-cta">Shop Coming Soon</button>
-      </nav>
-    </div>
-  </header>
+  <header class="navbar clean-header">
+  <div class="nav-inner clean-inner">
+    <a href="#home" class="brand-text-only">
+  Cotton Kandy
+</a>
 
-  <!-- HERO -->
-  <main id="home" class="hero">
-    <section class="hero-left">
-      <div class="hero-pill">
-        <span class="hero-pill-dot"></span>
-        Sweet styles in pure cotton
-      </div>
-      <h1 class="hero-title">Fashionably Sweet</h1>
-      <p class="hero-subtitle">
-        Discover premium Indian block-printed cotton wear — soft on the skin,
-        rich in tradition, and styled for everyday elegance.
-      </p>
-      <div class="hero-buttons">
-  <a href="#prints" class="btn-primary">Explore Collections</a>
-  <a href="#why" class="btn-secondary">Our Story</a>
+    <nav class="nav-links clean-nav">
+      <a href="#home">Home</a>
+      <a href="#prints">Gallery</a>
+      <a href="#why">Our Story</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+<!-- HERO -->
+<main id="home" class="hero">
+  <section class="hero-center">
+
+    <div class="hero-pill">
+      <span class="hero-pill-dot"></span>
+      Sweet styles in pure cotton
+    </div>
+
+    <h1 class="hero-title">Fashionably Sweet</h1>
+
+    <p class="hero-subtitle">
+      Discover premium Indian block-printed cotton wear — soft on the skin,
+      rich in tradition, and styled for everyday elegance.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#prints" class="btn-primary">Explore Collections</a>
+      <a href="#why" class="btn-secondary">Our Story</a>
+    </div>
+
+<div class="hero-stats">
+  <div class="stat-card">
+    <div class="stat-number">Timeless</div>
+    <div class="stat-label">Print designs</div>
+  </div>
+
+  <div class="stat-card">
+    <div class="stat-number">4K+</div>
+    <div class="stat-label">Happy customers</div>
+  </div>
+
+  <div class="stat-card">
+    <div class="stat-number">100%</div>
+    <div class="stat-label">Pure cotton comfort</div>
+  </div>
 </div>
 
-      <div class="hero-stats">
-        <div class="stat-card">
-          <div class="stat-number">500+</div>
-          <div class="stat-label">Unique print designs</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">10K+</div>
-          <div class="stat-label">Happy customers</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">100%</div>
-          <div class="stat-label">Pure cotton comfort</div>
-        </div>
-      </div>
-    </section>
+  </section>
+</main>
 
-    <aside class="hero-right">
-      <div class="hero-card">
-        <div class="hero-card-tag">Signature Palette</div>
-        <div class="hero-card-title">Lavender dreams</div>
-        <div class="hero-card-text">
-          Inspired by traditional Indian textiles, softened with pastel tones
-          for a sweet, modern finish.
-        </div>
-        <div class="hero-swatch-row">
-          <div class="swatch swatch-1"></div>
-          <div class="swatch swatch-2"></div>
-          <div class="swatch swatch-3"></div>
-        </div>
-        <div class="hero-card-footer">
-          <span>Block prints • Cotton • Comfort</span>
-          <span class="badge-soft">Made in Bharath 🇮🇳</span>
-        </div>
-        <div class="hero-circle"></div>
-      </div>
-    </aside>
-  </main>
 
   <!-- PRINTS SECTION -->
   <section id="prints">
-    <div class="section-header">
-      <h2 class="section-title">Our Prints</h2>
-      <p class="section-subtitle">
-        Handpicked Indian traditional prints, curated in soft cotton for
-        everyday wear.
-      </p>
-    </div>
-    <div class="prints-grid">
+  <div class="section-header">
+    <h2 class="section-title">Our Prints</h2>
+    <p class="section-subtitle">
+      Handpicked Indian traditional prints, curated in soft cotton for
+      everyday wear.
+    </p>
+  </div>
+
+  <div class="prints-grid">
+
+    <a href="prints/kalamkari.html" class="print-link">
       <div class="print-card">
-        <div class="print-thumb"></div>
+        <div class="print-thumb">
+          <img src="images/kalamkari1.png" alt="Kalamkari short kurti">
+        </div>
         <div class="print-name">Kalamkari</div>
-        <div class="print-desc">Artful stories in every motif.</div>
+        <div class="print-desc">Artful stories </div>
       </div>
+    </a>
+
+    <a href="prints/ajrakh.html" class="print-link">
       <div class="print-card">
-        <div class="print-thumb"></div>
+        <div class="print-thumb">
+          <img src="images/Ajrakh.png" alt="Ajrakh short kurti">
+        </div>
         <div class="print-name">Ajrakh</div>
-        <div class="print-desc">Heritage patterns, deep hues.</div>
+        <div class="print-desc">Heritage patterns </div>
       </div>
+    </a>
+
+    <a href="prints/indigo.html" class="print-link">
       <div class="print-card">
-        <div class="print-thumb"></div>
+        <div class="print-thumb">
+          <img src="images/Indigo.png" alt="Indigo short kurti">
+        </div>
         <div class="print-name">Indigo</div>
         <div class="print-desc">Cool blues in soft cotton.</div>
       </div>
+    </a>
+
+    <a href="prints/jaipur.html" class="print-link">
       <div class="print-card">
-        <div class="print-thumb"></div>
+        <div class="print-thumb">
+          <img src="images/Jaipur.png" alt="Jaipur print short kurti">
+        </div>
         <div class="print-name">Jaipur</div>
-        <div class="print-desc">Playful florals & buttas.</div>
+        <div class="print-desc">Playful florals &amp; buttas.</div>
       </div>
+    </a>
+
+    <a href="prints/bagru.html" class="print-link">
       <div class="print-card">
-        <div class="print-thumb"></div>
+        <div class="print-thumb">
+          <img src="images/Bagru.png" alt="Bagru print short kurti">
+        </div>
         <div class="print-name">Bagru</div>
         <div class="print-desc">Earthy tones, timeless style.</div>
       </div>
-    </div>
-  </section>
+    </a>
+
+    <a href="prints/bagru.html" class="print-link">
+      <div class="print-card">
+        <div class="print-thumb">
+          <img src="images/Bagru.png" alt="Bagru print short kurti">
+        </div>
+        <div class="print-name">Bagru</div>
+        <div class="print-desc">Earthy tones, timeless style.</div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
 
   <!-- WHY SECTION -->
   <section id="why">
@@ -682,14 +858,11 @@
     <div class="contact-wrapper">
       <div class="contact-grid">
         <form class="contact-form">
-          <div style="margin-bottom: 0.8rem;">
+          <div style="margin-bottom: 2rem;">
             <label for="name">Name</label>
             <input id="name" type="text" placeholder="Your name" />
           </div>
-          <div style="margin-bottom: 0.8rem;">
-            <label for="phone">Phone</label>
-            <input id="phone" type="tel" placeholder="Your phone number" />
-          </div>
+
           <div style="margin-bottom: 1rem;">
             <label for="message">Message</label>
             <textarea id="message" placeholder="Tell us what you're looking for..."></textarea>
@@ -697,29 +870,13 @@
           <button type="button" class="btn-primary" onclick="sendToWhatsApp()">
   Send Message
 </button>
-        </form>
-
-        <div class="contact-mini">
-          <p>
-            Prefer WhatsApp? We’re happy to share photos, prices, and fabric details directly.
-          </p>
-          <a
-  class="wa-link"
-  href="https://wa.me/919380661101"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <span>💬 Chat on WhatsApp</span>
-</a>
-
-          <p style="margin-top: 1rem;">
-            Made with love in Bharath 🇮🇳  
-            <br />Kalamkari • Indigo • Jaipur • Ajrakh • Bagru & more.
-          </p>
-        </div>
+        </form>		
+        	
       </div>
     </div>
   </section>
+
+
 <section id="visit-store">
   <h2>Visit Our Store</h2>
   <p>
@@ -763,25 +920,6 @@
     // Set current year
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
-  <script>
-function sendToWhatsApp() {
-  const name = document.getElementById("name").value;
-  const phone = document.getElementById("phone").value;
-  const message = document.getElementById("message").value;
-
-  const text =
-    "Hello Cotton Kandy,%0A%0A" +
-    "Name: " + name + "%0A" +
-    "Phone: " + phone + "%0A%0A" +
-    "Message:%0A" + message;
-
-  const whatsappUrl = "https://wa.me/919380661101?text=" + text;
-  window.open(whatsappUrl, "_blank");
-}
-</script>
+  	
 </body>
 </html>
-
-
-
-
