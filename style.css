@@ -467,15 +467,14 @@
 
     /* CONTACT */
     .contact-wrapper {
-      background: white;
-      border-radius: var(--radius-lg);
-      padding: 1.6rem;
-      box-shadow: var(--shadow-soft);
-      max-width: 680px;
-      margin: 0 auto 3rem;
-      transform: scale(1.20);
-      transform-origin: center top;
-    }
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 2.2rem;
+  box-shadow: 0 12px 40px rgba(200, 162, 200, 0.25);
+  max-width: 680px;
+  margin: 0 auto 3rem;
+}
+
 
     .contact-grid {
   display: block;
@@ -738,6 +737,13 @@ p {
     font-size: 26px;
   }
 }
+@media (max-width: 768px) {
+  .contact-wrapper {
+    padding: 1.6rem;
+    margin-bottom: 2rem;
+  }
+}
+
 
 
 
