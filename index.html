@@ -204,12 +204,12 @@
         <form class="contact-form">
           <div style="margin-bottom: 2rem;">
             <label for="name">Name</label>
-            <input id="name" type="text" placeholder="Your name" />
-          </div>
+<label for="name">Name</label>
+<input id="name" type="text" placeholder="Your name" required>
 
-          <div style="margin-bottom: 1rem;">
-            <label for="message">Message</label>
-            <textarea id="message" placeholder="Tell us what you're looking for..."></textarea>
+<label for="message">Message</label>
+<textarea id="message" placeholder="Tell us what you're looking for..." required></textarea>
+
           </div>
           <button type="button" class="btn-primary" onclick="sendToWhatsApp()">
   Send Message
@@ -260,13 +260,31 @@
   </div>
 </footer>
 
-  <script>
-    // Set current year
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-  	
+<script>
+  // Set current year
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  function sendToWhatsApp() {
+    const name = document.getElementById("name").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (!name || !message) {
+      alert("Please fill in both Name and Message.");
+      return;
+    }
+
+    const phoneNumber = "919380661101"; // WhatsApp number
+    const text = `Hello Cotton Kandy,%0A%0AName: ${name}%0AMessage: ${message}`;
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${text}`;
+
+    window.open(whatsappURL, "_blank");
+  }
+</script>
+
+ 	
 </body>
 </html>
+
 
 
 
