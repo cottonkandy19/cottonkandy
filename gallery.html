@@ -7,7 +7,7 @@
   <title>Gallery | Cotton Kandy</title>
 
   <!-- Main CSS -->
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/style.css" />
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
 
 <body>
 
-  <!-- ===== HEADER ===== -->
+  <!-- HEADER -->
   <header class="clean-header">
     <div class="header-inner clean-inner">
       <div class="brand-text-only" onclick="window.location.href='index.html'">
@@ -24,55 +24,89 @@
 
       <nav class="nav-links clean-nav">
         <a href="index.html">Home</a>
-        <a href="prints.html">Prints</a>
         <a href="gallery.html" class="active">Gallery</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+        <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- ===== GALLERY SECTION ===== -->
+  <!-- GALLERY -->
   <section class="gallery-section">
-    <h1>Our Collection</h1>
+    <h1 id="gallery-title">Our Collection</h1>
     <p class="gallery-subtitle">
-      Soft cotton silhouettes in timeless Indian prints.
+      Soft cotton silhouettes across timeless styles.
     </p>
 
-    <div class="gallery-grid">
+<!-- FILTER BUTTONS -->
+<div class="gallery-filters">
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="sk">Short Kurti</button>
+  <button class="filter-btn" data-filter="dr">Dress</button>
+  <button class="filter-btn" data-filter="lk">Long Kurti</button>
+  <button class="filter-btn" data-filter="pt">Pants</button>
+  <button class="filter-btn" data-filter="set">SET</button>
+  <button class="filter-btn" data-filter="uns">Unstitched</button>
+</div>
 
-      <!-- Kalamkari -->
-      <div class="gallery-item">
-        <img src="images/kalamkari.png" alt="Kalamkari Short Kurti">
-        <h3>Kalamkari</h3>
-      </div>
 
-      <!-- Ajrakh -->
-      <div class="gallery-item">
-        <img src="images/ajrakh.png" alt="Ajrakh Kurti">
-        <h3>Ajrakh</h3>
-      </div>
+   <div class="gallery-grid">
 
-      <!-- Indigo -->
-      <div class="gallery-item">
-        <img src="images/indigo.png" alt="Indigo Kurti">
-        <h3>Indigo</h3>
-      </div>
+  <!-- SHORT KURTI -->
+<div class="gallery-item" data-category="sk"><img src="./images/sk/sk1.png" alt="Short Kurti"></div>
+<div class="gallery-item" data-category="sk"><img src="./images/sk/sk2.jpg" alt="Short Kurti"></div>
+<div class="gallery-item" data-category="sk"><img src="./images/sk/sk3.jpg" alt="Short Kurti"></div>
+<div class="gallery-item" data-category="sk"><img src="./images/sk/sk4.jpg" alt="Short Kurti"></div>
+<div class="gallery-item" data-category="sk"><img src="./images/sk/sk5.jpg" alt="Short Kurti"></div>
 
-      <!-- Jaipur -->
-      <div class="gallery-item">
-        <img src="images/jaipur.png" alt="Jaipur Print Kurti">
-        <h3>Jaipur</h3>
-      </div>
+<!-- DRESS -->
+<div class="gallery-item" data-category="dr"><img src="./images/dr/dr1.jpg" alt="Dress"></div>
+<div class="gallery-item" data-category="dr"><img src="./images/dr/dr2.jpg" alt="Dress"></div>
+<div class="gallery-item" data-category="dr"><img src="./images/dr/dr3.jpg" alt="Dress"></div>
+<div class="gallery-item" data-category="dr"><img src="./images/dr/dr4.jpg" alt="Dress"></div>
+<div class="gallery-item" data-category="dr"><img src="./images/dr/dr5.jpg" alt="Dress"></div>
 
-      <!-- Bagru -->
-      <div class="gallery-item">
-        <img src="images/bagru.png" alt="Bagru Print Kurti">
-        <h3>Bagru</h3>
-      </div>
+<!-- LONG KURTI -->
+<div class="gallery-item" data-category="lk"><img src="./images/lk/lk1.jpg" alt="Long Kurti"></div>
+<div class="gallery-item" data-category="lk"><img src="./images/lk/lk2.jpg" alt="Long Kurti"></div>
+<div class="gallery-item" data-category="lk"><img src="./images/lk/lk3.jpg" alt="Long Kurti"></div>
+<div class="gallery-item" data-category="lk"><img src="./images/lk/lk4.jpg" alt="Long Kurti"></div>
+<div class="gallery-item" data-category="lk"><img src="./images/lk/lk5.jpg" alt="Long Kurti"></div>
 
-    </div>
+<!-- PANTS -->
+<div class="gallery-item" data-category="pt"><img src="./images/pt/pt1.jpg" alt="Pants"></div>
+<div class="gallery-item" data-category="pt"><img src="./images/pt/pt2.jpg" alt="Pants"></div>
+<div class="gallery-item" data-category="pt"><img src="./images/pt/pt3.jpg" alt="Pants"></div>
+<div class="gallery-item" data-category="pt"><img src="./images/pt/pt4.jpg" alt="Pants"></div>
+<div class="gallery-item" data-category="pt"><img src="./images/pt/pt5.jpg" alt="Pants"></div>
+
+<!-- SET -->
+<div class="gallery-item" data-category="set"><img src="./images/set/set1.jpg" alt="Set"></div>
+<div class="gallery-item" data-category="set"><img src="./images/set/set2.jpg" alt="Set"></div>
+<div class="gallery-item" data-category="set"><img src="./images/set/set3.jpg" alt="Set"></div>
+<div class="gallery-item" data-category="set"><img src="./images/set/set4.jpg" alt="Set"></div>
+<div class="gallery-item" data-category="set"><img src="./images/set/set5.jpg" alt="Set"></div>
+
+<!-- UNSTITCHED -->
+<div class="gallery-item" data-category="uns"><img src="./images/uns/uns1.jpg" alt="Unstitched Set"></div>
+<div class="gallery-item" data-category="uns"><img src="./images/uns/uns2.jpg" alt="Unstitched Set"></div>
+<div class="gallery-item" data-category="uns"><img src="./images/uns/uns3.jpg" alt="Unstitched Set"></div>
+<div class="gallery-item" data-category="uns"><img src="./images/uns/uns4.jpg" alt="Unstitched Set"></div>
+<div class="gallery-item" data-category="uns"><img src="./images/uns/uns5.jpg" alt="Unstitched Set"></div>
+
+
+</div>
+
+
   </section>
+
+<!-- IMAGE MODAL -->
+<div id="image-modal" class="image-modal">
+  <span class="modal-close">&times;</span>
+  <img class="modal-image" id="modal-image" src="" alt="Product image">
+</div>
+
+<script src="js/script.js"></script>
+
 
 </body>
 </html>
