@@ -63,19 +63,44 @@ if (selectedCategory) {
 }
 
 
-// IMAGE MODAL LOGIC
+// =========================
+// IMAGE MODAL (SAFE & GLOBAL)
+// =========================
+
 const modal = document.getElementById("image-modal");
 const modalImg = document.getElementById("modal-image");
 const closeBtn = document.querySelector(".modal-close");
 
-// Open modal on image click
-items.forEach(item => {
-  const img = item.querySelector("img");
-  img.addEventListener("click", () => {
-    modalImg.src = img.src;
-    modal.classList.add("active");
+if (modal && modalImg && closeBtn) {
+
+  // GALLERY images
+  document.querySelectorAll(".gallery-item img").forEach(img => {
+    img.addEventListener("click", () => {
+      modalImg.src = img.src;
+      modal.classList.add("active");
+    });
   });
-});
+
+  // HOME → PRINTS images
+  document.querySelectorAll(".zoomable").forEach(img => {
+    img.addEventListener("click", () => {
+      modalImg.src = img.src;
+      modal.classList.add("active");
+    });
+  });
+
+  // Close button
+  closeBtn.addEventListener("click", () => {
+    modal.classList.remove("active");
+  });
+
+  // Close on outside click
+  modal.addEventListener("click", e => {
+    if (e.target === modal) {
+      modal.classList.remove("active");
+    }
+  });
+}
 
 // Close modal (X button)
 closeBtn.addEventListener("click", () => {
@@ -99,5 +124,6 @@ zoomableImages.forEach(img => {
     modal.classList.add("active");
   });
 });
+
 
 
