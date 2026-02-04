@@ -1004,8 +1004,8 @@ p {
 }
 
 .social-icons a {
-  width: 46px;
-  height: 46px;
+  width: 60px;
+  height: 60px;
   border-radius: 999px;
   background: white;
   box-shadow: var(--shadow-soft);
@@ -1021,8 +1021,9 @@ p {
 }
 
 .social-icons img {
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
+  transform: scale(1.28);
 }
 
 .social-icons {
