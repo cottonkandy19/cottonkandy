@@ -46,6 +46,7 @@
 
 
 
+
 /* Glass effect on scroll */
 .navbar.scrolled {
   background: rgba(255, 249, 255, 0.7);
@@ -986,6 +987,47 @@ p {
   border: 1px solid rgba(200, 162, 200, 0.25);
 }
 
+
+/* =========================
+   SOCIAL ICONS SECTION
+========================= */
+
+.social-section {
+  padding: 1.8rem 1.25rem 3rem;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.4rem;
+}
+
+.social-icons a {
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  background: white;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.16);
+}
+
+.social-icons img {
+  width: 22px;
+  height: 22px;
+}
+
+.social-icons {
+  margin-top: 1.2rem;
+}
 
 
 
