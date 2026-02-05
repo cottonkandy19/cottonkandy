@@ -102,7 +102,7 @@ zoomableImages.forEach(img => {
 
 
 window.addEventListener("scroll", () => {
-  const navbar = document.querySelector(".navbar, .clean-header");
+  const navbar = document.querySelector(".navbar, .gallery-navbar");
   if (!navbar) return;
 
   if (window.scrollY > 10) {
