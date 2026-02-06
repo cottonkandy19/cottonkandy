@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Intro Cond';
+  src: url('../fonts/intro-cond.black-free.woff2') format('woff2'),
+       url('../fonts/intro-cond.black-free.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
   --lavender: #c27ad5;          /* a bit stronger */
@@ -142,31 +150,12 @@
       position: relative;
     }
 
-    .hero-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.2rem 0.75rem;
-      border-radius: 999px;
-      background: rgba(200, 162, 200, 0.12);
-      color: var(--lavender-dark);
-      font-size: 0.8rem;
-      margin-bottom: 1rem;
-    }
-
-    .hero-pill-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: var(--pink);
-    }
-
     .hero-title {
       font-size: clamp(2.5rem, 4.5vw, 3.2rem);
       font-weight: 800;
       letter-spacing: 0.01em;
       line-height: 1.35;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
       background: var(--gradient-main);
       -webkit-background-clip: text;
       color: transparent;
@@ -625,13 +614,18 @@
     }
 
 /* ===== HERO CENTER FIX (ZOOMED IN) ===== */
+
+
+
+
+
 .hero {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 52vh;              /* reduced height */
   text-align: center;
-  padding: 0.8rem 1.5rem 0.8rem;  /* tighter bottom spacing */
+  padding: 1.2rem 1.5rem 0.8rem;  /* tighter bottom spacing */
 }
 
 
@@ -671,14 +665,55 @@
 }
 
 /* Logo text only */
+
 .brand-text-only {
-  font-size: 1.8rem;
-  font-weight: 600;
-  letter-spacing: 0.4px;
-  background: linear-gradient(90deg, #f47ab5, #9b7bcf);
+  position: relative;
+
+  font-family: 'Intro Cond', 'Quicksand', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+
+  padding: 0.35rem 1.1rem;
+  border-radius: 999px;
+
+  /* Text gradient */
+  background-image: linear-gradient(90deg, #f47ab5, #9b7bcf);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+
+/* ✨ Glass pill background */
+.brand-text-only::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+
+  z-index: -1; /* stays behind text */
+}
+
+/* Hover */
+.brand-text-only:hover {
+  transform: translateY(-0.1px);
+}
+
+.brand-text-only:hover::before {
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.12);
+}
+
 
 /* Navigation */
 .clean-nav {
