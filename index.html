@@ -2,409 +2,283 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Cotton Kandy | Fashionably Sweet</title>
+  <title>Cotton Kandy | Hand Block Printed Cotton 🌿</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
-
-
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- FIX: Both fonts in one link tag, consistent across pages -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
   <!-- NAVBAR -->
   <header class="navbar clean-header">
-  <div class="nav-inner clean-inner">
-    <a href="/" class="brand-text-only">
-  Cotton Kandy
-</a>
-
-<nav class="nav-links clean-nav">
-  <a href="#home">Home</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="#why">Our Story</a>
-  <a href="#contact">Contact</a>
-</nav>
-    
-  </div>
-</header>
-
-
-<!-- HERO -->
-<main id="home" class="hero">
-  <section class="hero-center">
-
-
-    <h1 class="hero-title">Fashionably Sweet</h1>
-
-    <p class="hero-subtitle">
-      We begin with the right cotton and the right prints — and finish with pieces that feel made for you. 🌿
-    </p>
-
-    <div class="hero-buttons">
-      <a href="#prints" class="btn-primary">Explore Collections</a>
-      <a href="#why" class="btn-secondary">Our Story</a>
+    <div class="nav-inner clean-inner">
+      <a href="/" class="brand-text-only">Cotton Kandy</a>
+      <nav class="nav-links clean-nav">
+        <a href="#home">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="#why">Our Story</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
+  </header>
 
-<p class="hero-note">
-  Browse our collections — available in-store & via WhatsApp
-</p>
+  <!-- HERO -->
+  <main id="home" class="hero">
+    <section class="hero-center">
+      <h1 class="hero-title">Fashionably Sweet</h1>
+      <p class="hero-subtitle">
+        We begin with the right cotton and the right prints — and finish with pieces that feel made for you. 🌿
+      </p>
+      <div class="hero-buttons">
+        <a href="#prints" class="btn-primary">Explore Collections</a>
+        <a href="#why" class="btn-secondary">Our Story</a>
+      </div>
+      <p class="hero-note">Browse our collections — available in-store &amp; via WhatsApp</p>
+      <div class="hero-stats">
+        <div class="stat-card">
+          <div class="stat-number">Timeless</div>
+          <div class="stat-label">Print designs</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">4K+</div>
+          <div class="stat-label">Happy customers</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Pure cotton comfort</div>
+        </div>
+      </div>
+      <!-- FIX: Only ONE scroll hint (removed the duplicate after </main>) -->
+      <div class="scroll-hint">Scroll to explore ↓</div>
+    </section>
+  </main>
 
-
-
-<div class="hero-stats">
-  <div class="stat-card">
-    <div class="stat-number">Timeless</div>
-    <div class="stat-label">Print designs</div>
-  </div>
-
-  <div class="stat-card">
-    <div class="stat-number">4K+</div>
-    <div class="stat-label">Happy customers</div>
-  </div>
-
-  <div class="stat-card">
-    <div class="stat-number">100%</div>
-    <div class="stat-label">Pure cotton comfort</div>
-  </div>
-</div>
-
-<div class="scroll-hint">
-  Scroll to explore ↓
-</div>
-
+  <!-- PRODUCT CATEGORIES -->
+  <section class="product-categories">
+    <div class="section-header">
+      <h2 class="section-title">Explore by Style</h2>
+      <p class="section-subtitle">Thoughtfully crafted cotton wear for every style 🌿</p>
+    </div>
+    <div class="category-grid">
+      <a href="gallery.html?category=sk" class="category-card">
+        <img src="images/sk/sk1.png" alt="Short Kurti">
+        <span>Short Kurti</span>
+      </a>
+      <a href="gallery.html?category=dr" class="category-card">
+        <img src="images/dr/dr1.jpg" alt="Dress">
+        <span>Dress</span>
+      </a>
+      <a href="gallery.html?category=lk" class="category-card">
+        <img src="images/lk/lk1.jpg" alt="Long Kurti">
+        <span>Long Kurti</span>
+      </a>
+      <a href="gallery.html?category=pt" class="category-card">
+        <img src="images/pt/pt1.jpg" alt="Pants">
+        <span>Pants</span>
+      </a>
+      <a href="gallery.html?category=set" class="category-card">
+        <img src="images/set/set1.jpg" alt="Two Piece Set">
+        <span>SET</span>
+      </a>
+      <a href="gallery.html?category=uns" class="category-card">
+        <img src="images/uns/uns1.jpg" alt="Unstitched Material Set">
+        <span>Unstitched Material SET</span>
+      </a>
+    </div>
   </section>
-</main>
 
-<div class="scroll-hint">
-  Scroll to explore ↓
-</div>
+  <!-- PRINTS SECTION -->
+  <section id="prints">
+    <div class="section-header">
+      <h2 class="section-title">Our Prints</h2>
+      <p class="section-subtitle">Handpicked Indian traditional prints, curated in soft cotton 🧵</p>
+    </div>
+    <div class="prints-grid">
+      <div class="print-card">
+        <div class="print-thumb"><img src="images/prints/kalamkari.jpg" alt="Kalamkari" class="zoomable"></div>
+        <div class="print-name">Kalamkari</div>
+        <div class="print-desc">Artful stories</div>
+      </div>
+      <div class="print-card">
+        <div class="print-thumb"><img src="images/prints/ajrakh.jpg" alt="Ajrakh" class="zoomable"></div>
+        <div class="print-name">Ajrakh</div>
+        <div class="print-desc">Heritage patterns</div>
+      </div>
+      <div class="print-card">
+        <div class="print-thumb"><img src="images/prints/indigo.jpg" alt="Indigo" class="zoomable"></div>
+        <div class="print-name">Indigo</div>
+        <div class="print-desc">Cool blues in soft cotton</div>
+      </div>
+      <div class="print-card">
+        <div class="print-thumb"><img src="images/prints/jaipur.jpg" alt="Jaipur" class="zoomable"></div>
+        <div class="print-name">Jaipur</div>
+        <div class="print-desc">Playful florals &amp; buttas</div>
+      </div>
+      <div class="print-card">
+        <div class="print-thumb"><img src="images/prints/bagru.jpg" alt="Bagru" class="zoomable"></div>
+        <div class="print-name">Bagru</div>
+        <div class="print-desc">Earthy tones, timeless style</div>
+      </div>
+      <div class="print-card">
+        <div class="print-thumb"><img src="images/prints/katchi.png" alt="Katchi" class="zoomable"></div>
+        <div class="print-name">Katchi</div>
+        <div class="print-desc">Bold geometry &amp; rustic charm</div>
+      </div>
+    </div>
+  </section>
 
-<!-- PRODUCT CATEGORIES -->
-<section class="product-categories">
-  <div class="section-header">
-    <h2 class="section-title">Explore by Style</h2>
-    <p class="section-subtitle">
-      Thoughtfully crafted cotton wear for every style 🌿
-    </p>
+  <!-- PRINTS → GALLERY CTA -->
+  <div class="prints-gallery-cta">
+    <a href="gallery.html" class="btn-primary">Explore Full Gallery</a>
   </div>
-
-  <div class="category-grid">
-
-    <a href="gallery.html?category=sk" class="category-card">
-  <img src="images/sk/sk1.png" alt="Short Kurti">
-  <span>Short Kurti</span>
-</a>
-
-<a href="gallery.html?category=dr" class="category-card">
-  <img src="images/dr/dr1.jpg" alt="Dress">
-  <span>Dress</span>
-</a>
-
-<a href="gallery.html?category=lk" class="category-card">
-  <img src="images/lk/lk1.jpg" alt="Long Kurti">
-  <span>Long Kurti</span>
-</a>
-
-<a href="gallery.html?category=pt" class="category-card">
-  <img src="images/pt/pt1.jpg" alt="Pants">
-  <span>Pants</span>
-</a>
-
-<a href="gallery.html?category=set" class="category-card">
-  <img src="images/set/set1.jpg" alt="Two Piece Set">
-  <span>SET</span>
-</a>
-
-<a href="gallery.html?category=uns" class="category-card">
-  <img src="images/uns/uns1.jpg" alt="Unstitched Material Set">
-  <span>Unstitched Material SET</span>
-</a>
-
-
-  </div>
-</section>
-
-
-<!-- PRINTS SECTION -->
-<section id="prints">
-  <div class="section-header">
-    <h2 class="section-title">Our Prints</h2>
-    <p class="section-subtitle">
-      Handpicked Indian traditional prints, curated in soft cotton 🧵
-
-    </p>
-  </div>
-
-  <div class="prints-grid">
-
-    <div class="print-card">
-      <div class="print-thumb">
-        <img src="images/prints/kalamkari.jpg" alt="Kalamkari" class="zoomable">
-      </div>
-      <div class="print-name">Kalamkari</div>
-      <div class="print-desc">Artful stories</div>
-    </div>
-
-    <div class="print-card">
-      <div class="print-thumb">
-        <img src="images/prints/ajrakh.jpg" alt="Ajrakh" class="zoomable">
-      </div>
-      <div class="print-name">Ajrakh</div>
-      <div class="print-desc">Heritage patterns</div>
-    </div>
-
-    <div class="print-card">
-      <div class="print-thumb">
-        <img src="images/prints/indigo.jpg" alt="Indigo" class="zoomable">
-      </div>
-      <div class="print-name">Indigo</div>
-      <div class="print-desc">Cool blues in soft cotton</div>
-    </div>
-
-    <div class="print-card">
-      <div class="print-thumb">
-        <img src="images/prints/jaipur.jpg" alt="Jaipur" class="zoomable">
-      </div>
-      <div class="print-name">Jaipur</div>
-      <div class="print-desc">Playful florals &amp; buttas</div>
-    </div>
-
-    <div class="print-card">
-      <div class="print-thumb">
-        <img src="images/prints/bagru.jpg" alt="Bagru" class="zoomable">
-      </div>
-      <div class="print-name">Bagru</div>
-      <div class="print-desc">Earthy tones, timeless style</div>
-    </div>
-
-    <div class="print-card">
-      <div class="print-thumb">
-        <img src="images/prints/katchi.png" alt="Katchi" class="zoomable">
-      </div>
-      <div class="print-name">Katchi</div>
-      <div class="print-desc">Bold geometry & rustic charm</div>
-    </div>
-
-  </div>
-</section>
-
-
-
-<!-- PRINTS → GALLERY CTA -->
-<div class="prints-gallery-cta">
-  <a href="gallery.html" class="btn-primary">
-    Explore Full Gallery
-  </a>
-</div>
-
 
   <!-- WHY SECTION -->
   <section id="why">
     <div class="section-header">
       <h2 class="section-title">Why Cotton Kandy?</h2>
-      <p class="section-subtitle">
-          We blend craft, comfort, and sweetness into every stitch 🧵
-      </p>
+      <p class="section-subtitle">We blend craft, comfort, and sweetness into every stitch 🧵</p>
     </div>
     <div class="why-grid">
       <div class="why-card">
         <div class="why-icon">🧵</div>
         <div class="why-title">Premium Cotton Only</div>
-        <div class="why-text">
-          Breathable, soft fabrics chosen for all-day comfort, even in warm
-          weather.
-        </div>
+        <div class="why-text">Breathable, soft fabrics chosen for all-day comfort, even in warm weather.</div>
       </div>
       <div class="why-card">
         <div class="why-icon">🎨</div>
         <div class="why-title">Traditional Prints</div>
-        <div class="why-text">
-          Kalamkari, Ajrakh, Indigo, Jaipur, Bagru — curated to celebrate Indian
-          textile heritage.
-        </div>
+        <div class="why-text">Kalamkari, Ajrakh, Indigo, Jaipur, Bagru — curated to celebrate Indian textile heritage.</div>
       </div>
       <div class="why-card">
         <div class="why-icon">💗</div>
         <div class="why-title">Fashionably Sweet</div>
-        <div class="why-text">
-          Designed with breathable cotton and thoughtful cuts, our pieces move with you — so comfortable and flattering, they often feel made just for you.
-        </div>
+        <div class="why-text">Designed with breathable cotton and thoughtful cuts, our pieces move with you — so comfortable and flattering, they often feel made just for you.</div>
       </div>
     </div>
   </section>
 
   <!-- CONTACT SECTION -->
-
   <section id="contact">
     <div class="section-header">
       <h2 class="section-title">Reach Out</h2>
-      <p class="section-subtitle">
-        Just cotton love — we’re a message away 💗
-      </p>
+      <p class="section-subtitle">Just cotton love — we're a message away 💗</p>
     </div>
-
     <div class="contact-wrapper">
       <div class="contact-grid">
-        <form class="contact-form">
+        <div class="contact-form">
           <div style="margin-bottom: 2rem;">
-            
-<label for="name">Name</label>
-<input id="name" type="text" placeholder="Your name" required>
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Your name" required>
+            <!-- FIX: inline error messages instead of alert() -->
+            <span class="field-error" id="name-error"></span>
 
-<label for="message">Message</label>
-<textarea id="message" placeholder="Tell us what you're looking for..." required></textarea>
-
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Tell us what you're looking for..." required></textarea>
+            <span class="field-error" id="message-error"></span>
           </div>
-          <button type="button" class="btn-primary" onclick="sendToWhatsApp()">
-  Send Message
-</button>
-        </form>		
-        	
+          <button type="button" class="btn-primary" onclick="sendToWhatsApp()">Send Message</button>
+        </div>
       </div>
     </div>
   </section>
 
-
-<section id="visit-store" class="store-section">
-
-  <div class="section-header">
-    <h2 class="section-title">Visit Our Store</h2>
-    <p class="section-subtitle">Because some fabrics need to be felt, not just seen ✨ </p>
-  </div>
-
-  <!-- STORE CARD -->
-  <div class="store-card">
-
-    <div class="store-grid">
-
-      <!-- LEFT: STORE DETAILS -->
-      <div class="store-info">
-        <p> Adress :<br>
-          312, Narayana Pillai Street,<br>
-          3rd Cross Commercial Street,<br>
-          Bengaluru, Karnataka – 560001
-        </p>
-
-        <p> 🕒 
-           10:30 AM – 9:30 PM</p>
-        <p> 📞 WhatsApp / Call: <br>
-           +91 9380661101</p>
-
+  <!-- VISIT OUR STORE -->
+  <section id="visit-store" class="store-section">
+    <div class="section-header">
+      <h2 class="section-title">Visit Our Store</h2>
+      <p class="section-subtitle">Because some fabrics need to be felt, not just seen ✨</p>
+    </div>
+    <div class="store-card">
+      <div class="store-grid">
+        <div class="store-info">
+          <!-- FIX: "Adress" → "Address" -->
+          <p>Address:<br>
+            312, Narayana Pillai Street,<br>
+            3rd Cross Commercial Street,<br>
+            Bengaluru, Karnataka – 560001
+          </p>
+          <p>🕒 10:30 AM – 9:30 PM</p>
+          <p>📞 WhatsApp / Call:<br>+91 9380661101</p>
+        </div>
+        <div class="store-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.8306525809703!2d77.60592467484156!3d12.98268098733368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1777a21a64a9%3A0x5e21dc3e0b9cf36b!2sCotton%20Kandy!5e0!3m2!1sen!2sin!4v1770059742946!5m2!1sen!2sin"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+          <p class="contact-mini">Tap the map for directions</p>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <!-- RIGHT: GOOGLE MAP -->
-      <div class="store-map">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.8306525809703!2d77.60592467484156!3d12.98268098733368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1777a21a64a9%3A0x5e21dc3e0b9cf36b!2sCotton%20Kandy!5e0!3m2!1sen!2sin!4v1770059742946!5m2!1sen!2sin"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-
-        <p class="contact-mini">Tap the map for directions</p>
-      </div>
-
-    </div> <!-- /.store-grid -->
-
-  </div> <!-- /.store-card -->
-
-</section>
-
-
-<!-- SOCIAL LINKS SECTION -->
-<section class="social-section">
-
-  <div class="section-header">
-    <h2 class="section-title">Connect With Us</h2>
-    <p class="section-subtitle">
-      Stay close to our cotton stories, new arrivals & everyday sweetness 💗
-    </p>
-  </div>
-
-  <div class="social-icons">
-    <a
-      href="https://www.instagram.com/cottonkandy_19/"
-      target="_blank"
-      aria-label="Instagram"
-    >
-      <img src="images/icons/instagram.svg" alt="Instagram">
-    </a>
-
-    <a
-      href="https://www.facebook.com/profile.php?id=61584751172889"
-      target="_blank"
-      aria-label="Facebook"
-    >
-      <img src="images/icons/facebook.svg" alt="Facebook">
-    </a>
-<a
-  href="https://wa.me/919380661101"
-  target="_blank"
-  aria-label="WhatsApp">
-  <img src="images/icons/whatsapp.svg" alt="WhatsApp">
-</a>
-
-
-  </div>
-
-</section>
-
-
+  <!-- SOCIAL LINKS SECTION -->
+  <section class="social-section">
+    <div class="section-header">
+      <h2 class="section-title">Connect With Us</h2>
+      <p class="section-subtitle">Stay close to our cotton stories, new arrivals &amp; everyday sweetness 💗</p>
+    </div>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/cottonkandy_19/" target="_blank" aria-label="Instagram">
+        <img src="images/icons/instagram.svg" alt="Instagram">
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61584751172889" target="_blank" aria-label="Facebook">
+        <img src="images/icons/facebook.svg" alt="Facebook">
+      </a>
+      <a href="https://wa.me/919380661101" target="_blank" aria-label="WhatsApp">
+        <img src="images/icons/whatsapp.svg" alt="WhatsApp">
+      </a>
+    </div>
+  </section>
 
   <!-- FOOTER -->
-<footer>
-  <div class="footer-inner">
-    <div>
-      © <span id="year"></span> Cotton Kandy · Fashionably Sweet  
-      <br />Bangalore, India  
-      <br />📞 <a href="tel:9380661101">9380661101</a> ·
-      ✉️ <a href="mailto:cottonkandy19@gmail.com">cottonkandy19@gmail.com</a>
+  <footer>
+    <div class="footer-inner">
+      <div>
+        © <span id="year"></span> Cotton Kandy · Fashionably Sweet
+        <br>Bangalore, India
+        <br>📞 <a href="tel:9380661101">9380661101</a> ·
+        ✉️ <a href="mailto:cottonkandy19@gmail.com">cottonkandy19@gmail.com</a>
+      </div>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#prints">Prints</a>
+        <a href="#why">Why Us</a>
+        <a href="https://www.instagram.com/cottonkandy_19/" target="_blank">Instagram</a>
+      </div>
     </div>
-    <div class="footer-links">
-      <a href="#home">Home</a>
-      <a href="#prints">Prints</a>
-      <a href="#why">Why Us</a>
-      <a
-        href="https://www.instagram.com/cottonkandy_19/"
-        target="_blank"
-      >Instagram</a>
+  </footer>
+
+  <!-- IMAGE MODAL -->
+  <div id="image-modal" class="image-modal">
+    <span class="modal-close">&times;</span>
+    <div class="modal-content-wrap">
+      <img class="modal-image" id="modal-image" src="" alt="Product image">
+      <!-- NEW: WhatsApp CTA inside modal -->
+      <a id="modal-whatsapp-btn"
+         href="https://wa.me/919380661101?text=Hi%20Cotton%20Kandy!%20I%20saw%20a%20product%20I%20love%20and%20would%20like%20to%20enquire%20%F0%9F%8C%BF"
+         target="_blank"
+         class="modal-whatsapp-btn">
+        <img src="images/icons/whatsapp.svg" alt="WhatsApp" style="width:20px;height:20px;flex-shrink:0;">
+        Enquire on WhatsApp
+      </a>
     </div>
   </div>
-</footer>
 
-<script>
-  // Set current year
-  document.getElementById("year").textContent = new Date().getFullYear();
+  <!-- NEW: Floating WhatsApp Button (visible on all scroll positions) -->
+  <a href="https://wa.me/919380661101?text=Hi%20Cotton%20Kandy!%20I%20saw%20your%20collection%20and%20would%20like%20to%20know%20more%20%F0%9F%8C%BF"
+     target="_blank"
+     class="whatsapp-float"
+     aria-label="Chat on WhatsApp">
+    <img src="images/icons/whatsapp.svg" alt="WhatsApp">
+  </a>
 
-  function sendToWhatsApp() {
-    const name = document.getElementById("name").value.trim();
-    const message = document.getElementById("message").value.trim();
+  <!-- FIX: All JS in one file — sendToWhatsApp moved to script.js -->
+  <script src="js/script.js"></script>
 
-    if (!name || !message) {
-      alert("Please fill in both Name and Message.");
-      return;
-    }
-
-    const phoneNumber = "919380661101"; // WhatsApp number
-    const text = `Hello Cotton Kandy,%0A%0AName: ${name}%0AMessage: ${message}`;
-    const whatsappURL = `https://wa.me/${phoneNumber}?text=${text}`;
-
-    window.open(whatsappURL, "_blank");
-  }
-</script>
-
-<div id="image-modal" class="image-modal">
-  <span class="modal-close">&times;</span>
-  <img class="modal-image" id="modal-image" src="" alt="Product image">
-</div>
- 
-<script src="js/script.js"></script>
-	
 </body>
 </html>
-
-
-

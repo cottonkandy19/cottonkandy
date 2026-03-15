@@ -3,112 +3,225 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Gallery | Cotton Kandy</title>
-
-  <!-- Main CSS -->
+  <title>Cotton Kandy | Our Collection 🌿</title>
+  <!-- FIX: Both fonts loaded (was missing Playfair Display) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
-
 
 <body class="gallery-page">
 
   <!-- HEADER -->
   <header class="navbar clean-header">
-  <div class="nav-inner clean-inner">
-    <a href="index.html" class="brand-text-only">
-      Cotton Kandy
-    </a>
-
-    <nav class="nav-links clean-nav">
-      <a href="index.html">Home</a>
-      <a href="gallery.html" class="active">Gallery</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
-
+    <div class="nav-inner clean-inner">
+      <a href="index.html" class="brand-text-only">Cotton Kandy</a>
+      <nav class="nav-links clean-nav">
+        <a href="index.html">Home</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
   <!-- GALLERY -->
   <section class="gallery-section">
     <h1 id="gallery-title">Our Collection</h1>
-    <p class="gallery-subtitle">
-      Soft cotton silhouettes across timeless styles.
-    </p>
+    <p class="gallery-subtitle">Soft cotton silhouettes across timeless styles.</p>
 
-<!-- FILTER BUTTONS -->
-<div class="gallery-filters">
-  <button class="filter-btn active" data-filter="all">All</button>
-  <button class="filter-btn" data-filter="sk">Short Kurti</button>
-  <button class="filter-btn" data-filter="dr">Dress</button>
-  <button class="filter-btn" data-filter="lk">Long Kurti</button>
-  <button class="filter-btn" data-filter="pt">Pants</button>
-  <button class="filter-btn" data-filter="set">SET</button>
-  <button class="filter-btn" data-filter="uns">Unstitched</button>
-</div>
+    <!-- FILTER BUTTONS -->
+    <div class="gallery-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="sk">Short Kurti</button>
+      <button class="filter-btn" data-filter="dr">Dress</button>
+      <button class="filter-btn" data-filter="lk">Long Kurti</button>
+      <button class="filter-btn" data-filter="pt">Pants</button>
+      <button class="filter-btn" data-filter="set">SET</button>
+      <button class="filter-btn" data-filter="uns">Unstitched</button>
+    </div>
 
+    <div class="gallery-grid">
 
-   <div class="gallery-grid">
+      <!-- SHORT KURTI -->
+      <!-- NEW: product name label added to each item -->
+      <div class="gallery-item" data-category="sk" data-label="Short Kurti">
+        <img src="./images/sk/sk1.png" alt="Short Kurti">
+        <div class="gallery-item-label">Short Kurti</div>
+      </div>
+      <div class="gallery-item" data-category="sk" data-label="Short Kurti">
+        <img src="./images/sk/sk2.jpg" alt="Short Kurti">
+        <div class="gallery-item-label">Short Kurti</div>
+      </div>
+      <div class="gallery-item" data-category="sk" data-label="Short Kurti">
+        <img src="./images/sk/sk3.jpg" alt="Short Kurti">
+        <div class="gallery-item-label">Short Kurti</div>
+      </div>
+      <div class="gallery-item" data-category="sk" data-label="Short Kurti">
+        <img src="./images/sk/sk4.jpg" alt="Short Kurti">
+        <div class="gallery-item-label">Short Kurti</div>
+      </div>
+      <div class="gallery-item" data-category="sk" data-label="Short Kurti">
+        <img src="./images/sk/sk5.jpg" alt="Short Kurti">
+        <div class="gallery-item-label">Short Kurti</div>
+      </div>
 
-  <!-- SHORT KURTI -->
-<div class="gallery-item" data-category="sk"><img src="./images/sk/sk1.png" alt="Short Kurti"></div>
-<div class="gallery-item" data-category="sk"><img src="./images/sk/sk2.jpg" alt="Short Kurti"></div>
-<div class="gallery-item" data-category="sk"><img src="./images/sk/sk3.jpg" alt="Short Kurti"></div>
-<div class="gallery-item" data-category="sk"><img src="./images/sk/sk4.jpg" alt="Short Kurti"></div>
-<div class="gallery-item" data-category="sk"><img src="./images/sk/sk5.jpg" alt="Short Kurti"></div>
+      <!-- DRESS -->
+      <div class="gallery-item" data-category="dr" data-label="Dress">
+        <img src="./images/dr/dr1.jpg" alt="Dress">
+        <div class="gallery-item-label">Dress</div>
+      </div>
+      <div class="gallery-item" data-category="dr" data-label="Dress">
+        <img src="./images/dr/dr2.jpg" alt="Dress">
+        <div class="gallery-item-label">Dress</div>
+      </div>
+      <div class="gallery-item" data-category="dr" data-label="Dress">
+        <img src="./images/dr/dr3.jpg" alt="Dress">
+        <div class="gallery-item-label">Dress</div>
+      </div>
+      <div class="gallery-item" data-category="dr" data-label="Dress">
+        <img src="./images/dr/dr4.jpg" alt="Dress">
+        <div class="gallery-item-label">Dress</div>
+      </div>
+      <div class="gallery-item" data-category="dr" data-label="Dress">
+        <img src="./images/dr/dr5.jpg" alt="Dress">
+        <div class="gallery-item-label">Dress</div>
+      </div>
 
-<!-- DRESS -->
-<div class="gallery-item" data-category="dr"><img src="./images/dr/dr1.jpg" alt="Dress"></div>
-<div class="gallery-item" data-category="dr"><img src="./images/dr/dr2.jpg" alt="Dress"></div>
-<div class="gallery-item" data-category="dr"><img src="./images/dr/dr3.jpg" alt="Dress"></div>
-<div class="gallery-item" data-category="dr"><img src="./images/dr/dr4.jpg" alt="Dress"></div>
-<div class="gallery-item" data-category="dr"><img src="./images/dr/dr5.jpg" alt="Dress"></div>
+      <!-- LONG KURTI -->
+      <div class="gallery-item" data-category="lk" data-label="Long Kurti">
+        <img src="./images/lk/lk1.jpg" alt="Long Kurti">
+        <div class="gallery-item-label">Long Kurti</div>
+      </div>
+      <div class="gallery-item" data-category="lk" data-label="Long Kurti">
+        <img src="./images/lk/lk2.jpg" alt="Long Kurti">
+        <div class="gallery-item-label">Long Kurti</div>
+      </div>
+      <div class="gallery-item" data-category="lk" data-label="Long Kurti">
+        <img src="./images/lk/lk3.jpg" alt="Long Kurti">
+        <div class="gallery-item-label">Long Kurti</div>
+      </div>
+      <div class="gallery-item" data-category="lk" data-label="Long Kurti">
+        <img src="./images/lk/lk4.jpg" alt="Long Kurti">
+        <div class="gallery-item-label">Long Kurti</div>
+      </div>
+      <div class="gallery-item" data-category="lk" data-label="Long Kurti">
+        <img src="./images/lk/lk5.jpg" alt="Long Kurti">
+        <div class="gallery-item-label">Long Kurti</div>
+      </div>
 
-<!-- LONG KURTI -->
-<div class="gallery-item" data-category="lk"><img src="./images/lk/lk1.jpg" alt="Long Kurti"></div>
-<div class="gallery-item" data-category="lk"><img src="./images/lk/lk2.jpg" alt="Long Kurti"></div>
-<div class="gallery-item" data-category="lk"><img src="./images/lk/lk3.jpg" alt="Long Kurti"></div>
-<div class="gallery-item" data-category="lk"><img src="./images/lk/lk4.jpg" alt="Long Kurti"></div>
-<div class="gallery-item" data-category="lk"><img src="./images/lk/lk5.jpg" alt="Long Kurti"></div>
+      <!-- PANTS -->
+      <div class="gallery-item" data-category="pt" data-label="Pants">
+        <img src="./images/pt/pt1.jpg" alt="Pants">
+        <div class="gallery-item-label">Pants</div>
+      </div>
+      <div class="gallery-item" data-category="pt" data-label="Pants">
+        <img src="./images/pt/pt2.jpg" alt="Pants">
+        <div class="gallery-item-label">Pants</div>
+      </div>
+      <div class="gallery-item" data-category="pt" data-label="Pants">
+        <img src="./images/pt/pt3.jpg" alt="Pants">
+        <div class="gallery-item-label">Pants</div>
+      </div>
+      <div class="gallery-item" data-category="pt" data-label="Pants">
+        <img src="./images/pt/pt4.jpg" alt="Pants">
+        <div class="gallery-item-label">Pants</div>
+      </div>
+      <div class="gallery-item" data-category="pt" data-label="Pants">
+        <img src="./images/pt/pt5.jpg" alt="Pants">
+        <div class="gallery-item-label">Pants</div>
+      </div>
 
-<!-- PANTS -->
-<div class="gallery-item" data-category="pt"><img src="./images/pt/pt1.jpg" alt="Pants"></div>
-<div class="gallery-item" data-category="pt"><img src="./images/pt/pt2.jpg" alt="Pants"></div>
-<div class="gallery-item" data-category="pt"><img src="./images/pt/pt3.jpg" alt="Pants"></div>
-<div class="gallery-item" data-category="pt"><img src="./images/pt/pt4.jpg" alt="Pants"></div>
-<div class="gallery-item" data-category="pt"><img src="./images/pt/pt5.jpg" alt="Pants"></div>
+      <!-- SET -->
+      <div class="gallery-item" data-category="set" data-label="Two Piece Set">
+        <img src="./images/set/set1.jpg" alt="Set">
+        <div class="gallery-item-label">Two Piece Set</div>
+      </div>
+      <div class="gallery-item" data-category="set" data-label="Two Piece Set">
+        <img src="./images/set/set2.jpg" alt="Set">
+        <div class="gallery-item-label">Two Piece Set</div>
+      </div>
+      <div class="gallery-item" data-category="set" data-label="Two Piece Set">
+        <img src="./images/set/set3.jpg" alt="Set">
+        <div class="gallery-item-label">Two Piece Set</div>
+      </div>
+      <div class="gallery-item" data-category="set" data-label="Two Piece Set">
+        <img src="./images/set/set4.jpg" alt="Set">
+        <div class="gallery-item-label">Two Piece Set</div>
+      </div>
+      <div class="gallery-item" data-category="set" data-label="Two Piece Set">
+        <img src="./images/set/set5.jpg" alt="Set">
+        <div class="gallery-item-label">Two Piece Set</div>
+      </div>
 
-<!-- SET -->
-<div class="gallery-item" data-category="set"><img src="./images/set/set1.jpg" alt="Set"></div>
-<div class="gallery-item" data-category="set"><img src="./images/set/set2.jpg" alt="Set"></div>
-<div class="gallery-item" data-category="set"><img src="./images/set/set3.jpg" alt="Set"></div>
-<div class="gallery-item" data-category="set"><img src="./images/set/set4.jpg" alt="Set"></div>
-<div class="gallery-item" data-category="set"><img src="./images/set/set5.jpg" alt="Set"></div>
+      <!-- UNSTITCHED -->
+      <div class="gallery-item" data-category="uns" data-label="Unstitched Material Set">
+        <img src="./images/uns/uns1.jpg" alt="Unstitched Set">
+        <div class="gallery-item-label">Unstitched Material Set</div>
+      </div>
+      <div class="gallery-item" data-category="uns" data-label="Unstitched Material Set">
+        <img src="./images/uns/uns2.jpg" alt="Unstitched Set">
+        <div class="gallery-item-label">Unstitched Material Set</div>
+      </div>
+      <div class="gallery-item" data-category="uns" data-label="Unstitched Material Set">
+        <img src="./images/uns/uns3.jpg" alt="Unstitched Set">
+        <div class="gallery-item-label">Unstitched Material Set</div>
+      </div>
+      <div class="gallery-item" data-category="uns" data-label="Unstitched Material Set">
+        <img src="./images/uns/uns4.jpg" alt="Unstitched Set">
+        <div class="gallery-item-label">Unstitched Material Set</div>
+      </div>
+      <div class="gallery-item" data-category="uns" data-label="Unstitched Material Set">
+        <img src="./images/uns/uns5.jpg" alt="Unstitched Set">
+        <div class="gallery-item-label">Unstitched Material Set</div>
+      </div>
 
-<!-- UNSTITCHED -->
-<div class="gallery-item" data-category="uns"><img src="./images/uns/uns1.jpg" alt="Unstitched Set"></div>
-<div class="gallery-item" data-category="uns"><img src="./images/uns/uns2.jpg" alt="Unstitched Set"></div>
-<div class="gallery-item" data-category="uns"><img src="./images/uns/uns3.jpg" alt="Unstitched Set"></div>
-<div class="gallery-item" data-category="uns"><img src="./images/uns/uns4.jpg" alt="Unstitched Set"></div>
-<div class="gallery-item" data-category="uns"><img src="./images/uns/uns5.jpg" alt="Unstitched Set"></div>
-
-
-</div>
-
-
+    </div>
   </section>
 
-<!-- IMAGE MODAL -->
-<div id="image-modal" class="image-modal">
-  <span class="modal-close">&times;</span>
-  <img class="modal-image" id="modal-image" src="" alt="Product image">
-</div>
+  <!-- FIX: Footer added to gallery page (was completely missing) -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        © <span id="year"></span> Cotton Kandy · Fashionably Sweet
+        <br>Bangalore, India
+        <br>📞 <a href="tel:9380661101">9380661101</a> ·
+        ✉️ <a href="mailto:cottonkandy19@gmail.com">cottonkandy19@gmail.com</a>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#prints">Prints</a>
+        <a href="index.html#why">Why Us</a>
+        <a href="https://www.instagram.com/cottonkandy_19/" target="_blank">Instagram</a>
+      </div>
+    </div>
+  </footer>
 
-<script src="js/script.js"></script>
+  <!-- IMAGE MODAL -->
+  <div id="image-modal" class="image-modal">
+    <span class="modal-close">&times;</span>
+    <div class="modal-content-wrap">
+      <img class="modal-image" id="modal-image" src="" alt="Product image">
+      <!-- NEW: WhatsApp CTA inside modal -->
+      <a id="modal-whatsapp-btn"
+         href="https://wa.me/919380661101?text=Hi%20Cotton%20Kandy!%20I%20saw%20a%20product%20I%20love%20and%20would%20like%20to%20enquire%20%F0%9F%8C%BF"
+         target="_blank"
+         class="modal-whatsapp-btn">
+        <img src="images/icons/whatsapp.svg" alt="WhatsApp" style="width:20px;height:20px;flex-shrink:0;">
+        Enquire on WhatsApp
+      </a>
+    </div>
+  </div>
 
+  <!-- NEW: Floating WhatsApp Button -->
+  <a href="https://wa.me/919380661101?text=Hi%20Cotton%20Kandy!%20I%20saw%20your%20collection%20and%20would%20like%20to%20know%20more%20%F0%9F%8C%BF"
+     target="_blank"
+     class="whatsapp-float"
+     aria-label="Chat on WhatsApp">
+    <img src="images/icons/whatsapp.svg" alt="WhatsApp">
+  </a>
+
+  <script src="js/script.js"></script>
 
 </body>
 </html>
