@@ -1100,3 +1100,120 @@ p {
 
 
 
+
+
+/* =========================
+   FLOATING WHATSAPP BUTTON
+========================= */
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 500;
+  width: 58px;
+  height: 58px;
+  border-radius: 999px;
+  background: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.55);
+}
+
+.whatsapp-float img {
+  width: 30px;
+  height: 30px;
+  filter: brightness(0) invert(1);
+}
+
+@media (max-width: 480px) {
+  .whatsapp-float {
+    bottom: 16px;
+    right: 16px;
+    width: 52px;
+    height: 52px;
+  }
+}
+
+
+/* =========================
+   MODAL WHATSAPP CTA BUTTON
+========================= */
+
+.modal-content-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 90%;
+}
+
+.modal-whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.4rem;
+  border-radius: 999px;
+  background: #25d366;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  white-space: nowrap;
+}
+
+.modal-whatsapp-btn img {
+  filter: brightness(0) invert(1);
+}
+
+.modal-whatsapp-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.5);
+}
+
+
+/* =========================
+   GALLERY ITEM LABEL
+========================= */
+
+.gallery-item {
+  position: relative;
+}
+
+.gallery-item-label {
+  margin-top: 0.6rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  text-align: center;
+  letter-spacing: 0.2px;
+}
+
+
+/* =========================
+   INLINE FORM VALIDATION
+========================= */
+
+.field-error {
+  display: block;
+  color: #c0392b;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.8rem;
+  min-height: 1em;
+}
+
+.contact-form input.error,
+.contact-form textarea.error {
+  border-color: #c0392b;
+}
