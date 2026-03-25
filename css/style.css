@@ -1011,6 +1011,36 @@ p {
   user-select: none;
 }
 
+.modal-nav {
+  position: fixed;
+  top: 50vh;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: white;
+  font-size: 3rem;
+  line-height: 1;
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(6px);
+  transition: background 0.2s ease, transform 0.2s ease;
+  z-index: 1000;
+  user-select: none;
+}
+
+.modal-nav:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.modal-prev { left: 16px; }
+.modal-next { right: 16px; }
+
 
 /* STORE CARD – same style as Contact card */
 .store-card {
