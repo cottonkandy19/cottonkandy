@@ -794,7 +794,10 @@ p {
 
 .gallery-item img {
   width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
   border-radius: 16px;
+  display: block;
 }
 
 .gallery-item h3 {
@@ -893,7 +896,7 @@ p {
 /* Image styling */
 .category-card img {
   width: 100%;
-  aspect-ratio: 3 / 4;   /* Portrait clothing ratio */
+  aspect-ratio: 2 / 3;   /* Portrait clothing ratio */
   object-fit: cover;     /* Keeps grid uniform */
   border-radius: 22px;
   box-shadow: var(--shadow-soft);
